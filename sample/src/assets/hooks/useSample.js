@@ -1,0 +1,5 @@
+const useSample = () =>{
+
+}
+
+default useSample
