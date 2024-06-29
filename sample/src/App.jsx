@@ -1,29 +1,37 @@
-import { useCallback, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useCallback, useState } from 'react'
 import './App.css'
 
+ Item = ({ item, onClick }) => {
+  console.log(`Rendering ${item}`);
+  return (
+    <div>
+      {item}
+      <button onClick={() => onClick(item)}>Click</button>
+    </div>
+  );
+};
+
+
+const Item = 
+
 function App() {
+  const [items, setItems] = useState(['item 1', 'item 2', 'item 3']);
   const [count, setCount] = useState(0)
 
+  // const handleClick = useCallback((item)=>{
+  //   console.log(`handle click ${item}`)
+  // },[]);
 
-  const reset = useCallback(()=>{
-    setCount(0)
-  })
-
+  const handleClick = (item) =>{
+    console.log('item function is called'+item);
+  }
   
   return (
     <div>
-      <h1>{count}</h1>
-      <button
-      onClick={()=>setCount(count+1)}
-      >increment</button>
-      <button
-      onClick={()=>setCount(count-1)}
-      >decrement</button>
-      <button
-      onClick={()=>reset()}
-      >reset</button>
+      <button onClick={()=>setCount(count+1)}>Re-render</button>
+      {items.map((item, index)=>(
+        <Item key={index} item={item} onClick={handleClick}></Item>
+      ))}
     </div>
   )
 }
