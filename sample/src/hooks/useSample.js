@@ -2,4 +2,4 @@ const useSample = () =>{
 
 }
 
-default useSample
+export default useSample
