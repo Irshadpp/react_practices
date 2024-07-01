@@ -54,7 +54,7 @@ const App = () => {
     }
       const newIntervalId = setInterval(()=>{
       dispatch(increment());
-    },1000)
+    },500)
     setIntervalId(newIntervalId)
   }
 
@@ -64,7 +64,7 @@ const App = () => {
     }
     const newIntervalId = setInterval(()=>{
       dispatch(decrement());
-    },1000)
+    },500)
     setIntervalId(newIntervalId)
   }
   return (
