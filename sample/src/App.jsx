@@ -1,9 +1,10 @@
 // import React, { useCallback, useState } from 'react'
 // import './App.css'
 
-import { useDispatch, useSelector } from "react-redux"
-import { decrement, increment } from "./utils/counterSlice";
-import {useState} from 'react'
+// import { useDispatch, useSelector } from "react-redux"
+// import { decrement, increment } from "./utils/counterSlice";
+// import {useState} from 'react'
+import Body from "./components/Body";
 
 //  Item = ({ item, onClick }) => {
 //   console.log(`Rendering ${item}`);
@@ -44,34 +45,32 @@ import {useState} from 'react'
 
 
 const App = () => {
-  const {count} = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
-  const [intervalId, setIntervalId] = useState(null);
+  // const {count} = useSelector((state) => state.counter);
+  // const dispatch = useDispatch();
+  // const [intervalId, setIntervalId] = useState(null);
 
-  const handleInc = () =>{
-    if(intervalId){
-      clearInterval(intervalId)
-    }
-      const newIntervalId = setInterval(()=>{
-      dispatch(increment());
-    },500)
-    setIntervalId(newIntervalId)
-  }
+  // const handleInc = () =>{
+  //   if(intervalId){
+  //     clearInterval(intervalId)
+  //   }
+  //     const newIntervalId = setInterval(()=>{
+  //     dispatch(increment());
+  //   },500)
+  //   setIntervalId(newIntervalId)
+  // }
 
-  const handleDec = () =>{
-    if(intervalId){
-      clearInterval(intervalId)
-    }
-    const newIntervalId = setInterval(()=>{
-      dispatch(decrement());
-    },500)
-    setIntervalId(newIntervalId)
-  }
+  // const handleDec = () =>{
+  //   if(intervalId){
+  //     clearInterval(intervalId)
+  //   }
+  //   const newIntervalId = setInterval(()=>{
+  //     dispatch(decrement());
+  //   },500)
+  //   setIntervalId(newIntervalId)
+  // }
   return (
     <div>
-      <button onClick={handleInc}>Increment</button>
-      <h1>{count}</h1>
-      <button onClick={handleDec}>Decrement</button>
+      <Body/>
     </div>
   )
 }
