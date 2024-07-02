@@ -12,6 +12,7 @@ const Body = () => {
     const handleClick = useCallback((card)=>{
         console.log(card, 'clicked');
     },[])
+
     
   return (
     <div>
