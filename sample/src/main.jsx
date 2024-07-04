@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import appStore from './utils/appStore.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Body from './components/Body.jsx'
 import Sum from './components/Sum.jsx'
+import Ref from './components/Ref.jsx'
 
 const router = createBrowserRouter([
     {
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
     {
         path: '/sum',
         element: <Sum/>
+    },
+    {
+        path:'/:id',
+        element: <Ref/>
     }
     
 ])
