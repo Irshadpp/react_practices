@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Body from './components/Body.jsx'
 import Sum from './components/Sum.jsx'
 import Ref from './components/Ref.jsx'
+import Counter from './components/Counter.jsx'
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     {
         path:'/:id',
         element: <Ref/>
+    },
+    {
+        path:'/counter',
+        element: <Counter/>
     }
     
 ])
